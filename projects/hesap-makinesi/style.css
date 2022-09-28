@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Silkscreen&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body,html{
+    height: 100%;
+}
+
+/* Hesap Makinesi */
+table {
+    background-color: #1c1c1c;
+    border: 2px solid black;
+    border-spacing: 10px;
+    margin: auto;
+    margin-top: 150px;
+    text-align: center;
+}
+
+table .btn {
+    width: 80px;
+    color: white;
+    background-color: #d4d4d2;
+    line-height: 300%;
+    font-size: 150%;
+    font-family: 'Allerta Stencil', sans-serif;
+    border-radius: 25px;
+}
+
+table .opr {
+    background-color: #505050;
+}
+
+table .esit {
+    background-color: #ff9500;
+}
+
+table .btn:hover {
+    cursor: pointer;
+    background-color: beige;
+    color: teal;
+}
+
+#islem,#gosterge {
+    text-align: right;
+    background-color: white;
+    padding: 2%;
+    font-family: 'Silkscreen', cursive;
+    border-radius: 25px;
+
+}
+
+#islem {
+    height: 50px;
+    font-size: 200%;
+    line-height: 40px;
+}
+
+#gosterge {
+    height: 30px;
+}

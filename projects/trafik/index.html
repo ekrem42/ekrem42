@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ampul Açma Kapama Ödevi</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: aqua;
+      }
+      .content{
+        width: 50%;
+        position: absolute;
+        left: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .butons {
+        padding: 30px 15px;
+        margin-top: -40px;
+        text-align: center;
+      }
+      button {
+        padding: 10px 40px;
+        margin: 10px;
+        border-radius: 10px;
+        font-size: 16px;
+        letter-spacing: 3px;
+        background-color: blueviolet;
+        transition: 0.5s ease-out;
+      }
+      button:hover {
+        background-color: aqua;
+        color: black;
+      }
+      img {
+        margin-top: -25px;
+      }
+      h1 {
+        margin-top: -10px;
+      }
+      .h1 {
+        display: inline-block;
+        animation: animate 2s infinite;
+      }
+      @keyframes animate {
+        0%{
+          background-color: aqua;
+          color: aqua;
+        }
+        75%{
+          background-color: aqua;
+          color: aqua;
+        }
+
+        100%{
+          background-color: aqua;
+          color: black;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="container">
+      <div class="content">
+        <div class="animation">
+          <h1>Lütfen Trafik Işıklarına<u class="h1">Dikkat Edelim</u></h1>
+        </div>
+        
+        <div class="images">
+          <img src="kapalı.png" alt=""/>
+        </div>
+        <div class="butons">
+          <button id="kirmizi">Bekle</button>
+          <button id="sari">Hazırlan</button>
+          <button id="yesil">Geç</button>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <script>
+
+      let kirmizi=document.getElementById("kirmizi");
+      let sari=document.getElementById("sari");
+      let yesil=document.getElementById("yesil");
+      let img=document.querySelector("img");
+
+      
+      let kirmiziSes=new Audio("bekle.mp3");
+      let sariSes=new Audio("hazırlan.mp3");
+      let yesilSes=new Audio("gec.mp3");
+
+      
+      kirmizi.addEventListener("click",()=>{
+        kirmiziSes.play();
+        img.src="kirmizi.png";
+      })
+      sari.addEventListener("click",()=>{
+        sariSes.play();
+        img.src="sari.png";
+      })
+      yesil.addEventListener("click",()=>{
+        yesilSes.play();
+        img.src="yesil.png";
+      })
+    </script>
+  </body>
+</html>
